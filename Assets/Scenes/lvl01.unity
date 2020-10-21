@@ -378,7 +378,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687065345}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: 0.574, z: 4}
+  m_LocalPosition: {x: 0, y: 0.574, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1008865010}
@@ -881,13 +881,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.70710576, y: -0, z: -0, w: 0.7071079}
-  m_LocalPosition: {x: 0, y: 39, z: 16}
+  m_LocalRotation: {x: -0.70528454, y: -0.050710946, z: -0.050710622, w: -0.7052876}
+  m_LocalPosition: {x: -4, y: 26, z: 12}
   m_LocalScale: {x: 1, y: 1.0000002, z: 1.0000002}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -261.775, y: -90.002014, z: -90.002014}
 --- !u!1 &1008865009
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,6 +897,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1008865010}
+  - component: {fileID: 1008865011}
   m_Layer: 0
   m_Name: loup
   m_TagString: Untagged
@@ -919,6 +920,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1008865011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008865009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0dcf8a1d209bb24693f9cb2f470b9ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chemin:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1060010880
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,11 +982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43bd39225c92bb468e5a0ee5e43cbb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vitesseSaut: 10
-  distStop: 0.1
-  distSlowDown: 1
-  vitesseMax: 2
-  acceleration: 2
+  distanceSaut: 8
 --- !u!1 &1227590874
 GameObject:
   m_ObjectHideFlags: 0

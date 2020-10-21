@@ -5,25 +5,17 @@ using UnityEngine;
 public class sautLapin : MonoBehaviour
 {
     public static Transform target;
-    public float vitesseSaut = 1.0f;
-
-    //truc du prof pour empecher que le lapin mongolise
+    public static Vector3 derniereTuile;
+    public static float etatDuSaut = 0f;
     private Vector3 targetPos;
-
-    public float distStop = 1;
-    public float distSlowDown = 2;
-    private float vitesse = 0;
-    public float vitesseMax = 1.0f;
-    private float vitesseMin = 0.1f;
-    public float acceleration = 1.0f;
-
-    private bool atDestination = false;
+    private float vitesse = 1.0f;
+    public float distanceSaut = 8.0f;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        derniereTuile = transform.position;
 
     }
 
@@ -32,40 +24,34 @@ public class sautLapin : MonoBehaviour
     void Update()
     {
         if (target!= null) {
-            targetPos = new Vector3(target.position.x, 1, target.position.z);
+            if(etatDuSaut == 0f) {
 
-            //Distance au point
-            Vector3 deplacement = targetPos - transform.position;
-            float distance = deplacement.magnitude;
-            float distanceRestante = distance - distStop;
-            atDestination = distanceRestante <= 0;
+                targetPos = new Vector3(target.position.x, 1, target.position.z);
+            }
 
-            if (!atDestination)
+            if(targetPos == derniereTuile || (targetPos - derniereTuile).magnitude >= distanceSaut)
             {
-                //On cherche à aller le plus vite vers la destination, mais à ralentir quand on arrive
-                //On reste entre vitesse min et max
-                float vitesseVoulue = vitesseMax;
-                if (distanceRestante < distSlowDown - distStop)
-                    vitesseVoulue = Mathf.Lerp(vitesseMax, vitesseMin, 1.0f - (distanceRestante / (distSlowDown - distStop)));
+                return;
+            }
 
-                //Prise en compte de l'accélération
-                if (vitesseVoulue > vitesse)
-                    vitesse = Mathf.Min(vitesse + acceleration * Time.deltaTime, vitesseVoulue);
-                else
-                    vitesse = vitesseVoulue; //On freine parfaitement bien
+            etatDuSaut += vitesse * Time.deltaTime;
 
-                //Déplacement
-                deplacement = deplacement.normalized * vitesse * Time.deltaTime;
-                transform.position += deplacement;
+
+            if (etatDuSaut >= 1.0f)
+            {
+                transform.position = targetPos;
+                derniereTuile = targetPos;
+                etatDuSaut = 0;
+            }
+
+            else
+            {
+                transform.position = Vector3.Lerp(derniereTuile, targetPos, etatDuSaut) + new Vector3(0, -2.0f * 4.0f * (etatDuSaut-0.5f)*(etatDuSaut - 0.5f) + 2.0f, 0);
+
+            }
 
             }
         }
         
 
     }
-
-    /*
-    Vector3 deplacement = new Vector3(target.position.x, 1, target.position.z) - new Vector3(this.transform.position.x, 1, this.transform.position.z);
-    deplacement = deplacement.normalized* vitesseSaut * Time.deltaTime;
-            transform.position += deplacement; */
-}
