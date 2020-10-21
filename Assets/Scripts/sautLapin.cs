@@ -6,10 +6,11 @@ public class sautLapin : MonoBehaviour
 {
     public static Transform target;
     public static Vector3 derniereTuile;
-    public static float etatDuSaut = 0f;
-    private Vector3 targetPos;
-    private float vitesse = 1.0f;
-    public float distanceSaut = 8.0f;
+    private float etatDuSaut = 0f;
+    public static Vector3 targetPos;
+    public static float vitesse = 1.0f;
+    public static float distanceSaut = 8.0f;
+    public static bool aSaute = false;
 
 
     // Start is called before the first frame update
@@ -23,6 +24,7 @@ public class sautLapin : MonoBehaviour
     
     void Update()
     {
+
         if (target!= null) {
             if(etatDuSaut == 0f) {
 
@@ -32,6 +34,11 @@ public class sautLapin : MonoBehaviour
             if(targetPos == derniereTuile || (targetPos - derniereTuile).magnitude >= distanceSaut)
             {
                 return;
+            }
+
+            if (etatDuSaut == 0f)
+            {
+                aSaute = true;
             }
 
             etatDuSaut += vitesse * Time.deltaTime;
