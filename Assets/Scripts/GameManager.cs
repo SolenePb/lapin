@@ -5,10 +5,11 @@ public class GameManager : MonoBehaviour
 {
     public float restartDelay = 1f;
     bool gameHasEnded = false;
+    public GameObject completeLevelUI;
 
     public void CompleteLevel()
     {
-        Debug.Log("Gagné bravo");
+        completeLevelUI.SetActive(true);
 
     }
 
