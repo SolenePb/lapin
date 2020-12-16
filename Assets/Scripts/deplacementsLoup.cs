@@ -14,6 +14,7 @@ public class deplacementsLoup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         longueurChemin = chemin.Count;
         posActuelleLoup = 0;
         departLoup = new Vector3(chemin[posActuelleLoup].position.x, 1, chemin[posActuelleLoup].position.z);
