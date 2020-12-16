@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class decesLapin : MonoBehaviour
 {
+    private static bool collisionLapinLoup = false;
     void Update()
     {
         
     }
     void OnCollisionEnter(Collision collisionInfo)
     {
+
         if (collisionInfo.collider.name == "loup")
         {
-            Debug.Log("perdu hihi");
+            collisionLapinLoup = true;
+            FindObjectOfType<GameManager>().GameOVER();
         }
     }
+
+  
 }
