@@ -1371,7 +1371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   restartDelay: 2
-  completeLevelUI: {fileID: 0}
+  completeLevelUI: {fileID: 1943783670}
 --- !u!4 &1497749278
 Transform:
   m_ObjectHideFlags: 0
@@ -1687,6 +1687,7 @@ GameObject:
   - component: {fileID: 1943783671}
   - component: {fileID: 1943783673}
   - component: {fileID: 1943783672}
+  - component: {fileID: 1943783674}
   m_Layer: 5
   m_Name: LevelComplete
   m_TagString: Untagged
@@ -1752,6 +1753,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943783670}
   m_CullTransparentMesh: 0
+--- !u!114 &1943783674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943783670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caae25458ab04b34f8dd51986c2a1909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2042990511
 PrefabInstance:
   m_ObjectHideFlags: 0
