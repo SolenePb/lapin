@@ -6,7 +6,7 @@ public class sautLapin : MonoBehaviour
 {
     public static Transform target;
     public static Vector3 derniereTuile;
-    private float etatDuSaut = 0f;
+    public static float etatDuSaut = 0f;
     public static Vector3 targetPos;
     public static float vitesse = 1.0f;
     public static float distanceSaut = 8.0f;
