@@ -15,7 +15,7 @@ public class animationStateController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //gestion des animations
+        //gestion des animations du lapin
         if (sautLapin.etatDuSaut > 0f && sautLapin.etatDuSaut < 0.15f) 
         {
             animator.SetBool("JumpEngaged",true);
@@ -40,5 +40,6 @@ public class animationStateController : MonoBehaviour
         }
 
         //orientation du lapin
+
     }
 }
