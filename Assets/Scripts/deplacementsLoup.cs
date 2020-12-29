@@ -9,7 +9,7 @@ public class deplacementsLoup : MonoBehaviour
     private Vector3 arriveeLoup;
     private int posActuelleLoup;
     private int longueurChemin;
-    private float etatDuSautLoup = 0f;
+    public static float etatDuSautLoup = 0f;
 
     // Start is called before the first frame update
     void Start()
