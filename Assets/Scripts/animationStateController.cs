@@ -38,8 +38,5 @@ public class animationStateController : MonoBehaviour
             animator.SetBool("JumpEnding", false);
             animator.SetBool("JumpFinished", true);
         }
-
-        //orientation du lapin
-
     }
 }

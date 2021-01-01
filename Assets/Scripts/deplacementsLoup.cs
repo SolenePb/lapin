@@ -67,8 +67,22 @@ public class deplacementsLoup : MonoBehaviour
 
             }
 
+            //rotation loup
+
+
+            // Determine which direction to rotate towards
+            Vector3 targetDirection = arriveeLoup - departLoup;
+
+            // The step size is equal to speed times frame time.
+            float singleStep = 10f * Time.deltaTime;
+
+            // Rotate the forward vector towards the target direction by one step
+            Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
+
+
+            // Calculate a rotation a step closer to the target and applies rotation to this object
+            transform.rotation = Quaternion.LookRotation(newDirection);
+
         }
     }
 }
-
-//if (sautLapin.targetPos != sautLapin.derniereTuile && sautLapin.targetPos != null)

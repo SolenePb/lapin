@@ -53,12 +53,30 @@ public class sautLapin : MonoBehaviour
 
             else
             {
+                //deplacement du lapin
                 transform.position = Vector3.Lerp(derniereTuile, targetPos, etatDuSaut) + new Vector3(0, -2.0f * 4.0f * (etatDuSaut-0.5f)*(etatDuSaut - 0.5f) + 2.0f, 0);
 
+                
             }
 
-            }
+            //rotation lapin
+
+
+            // Determine which direction to rotate towards
+            Vector3 targetDirection = targetPos - derniereTuile;
+
+            // The step size is equal to speed times frame time.
+            float singleStep = 10f * Time.deltaTime;
+
+            // Rotate the forward vector towards the target direction by one step
+            Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
+
+
+            // Calculate a rotation a step closer to the target and applies rotation to this object
+            transform.rotation = Quaternion.LookRotation(newDirection);
+
         }
+    }
         
 
     }
