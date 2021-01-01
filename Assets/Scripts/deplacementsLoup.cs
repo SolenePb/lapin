@@ -69,7 +69,7 @@ public class deplacementsLoup : MonoBehaviour
 
             //rotation loup
 
-
+            
             // Determine which direction to rotate towards
             Vector3 targetDirection = arriveeLoup - departLoup;
 

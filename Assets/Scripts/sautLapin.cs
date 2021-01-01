@@ -17,6 +17,8 @@ public class sautLapin : MonoBehaviour
     void Start()
     {
         derniereTuile = transform.position;
+        aSaute = false;
+        etatDuSaut = 0f;
 
     }
 

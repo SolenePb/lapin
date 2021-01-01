@@ -364,7 +364,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Jump to the last islet! Beware of the wolf.
+  m_Text: 'Pounce to the last islet! Beware of the wolf.
 
 '
 --- !u!222 &285447465

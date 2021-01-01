@@ -10,10 +10,13 @@ EditorBuildSettings:
     guid: 20d9ad8b7d6dbca4983b7728c2df05b7
   - enabled: 1
     path: Assets/Scenes/lvl01.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    guid: d964580ee2d142c45a6f70a5ef9c2094
   - enabled: 1
     path: Assets/Scenes/lvl02.unity
-    guid: b8d7472b51cd0fc49bd5c088ed44a771
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/lvl03.unity
+    guid: fdce1860b92516f4f8d7d9a4937a077d
   - enabled: 1
     path: Assets/Scenes/EndScreen.unity
     guid: 552bf5ac70d312845b672b6bc348d71e
