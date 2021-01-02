@@ -12,7 +12,7 @@ public class decesLapin : MonoBehaviour
     void OnCollisionEnter(Collision collisionInfo)
     {
 
-        if (collisionInfo.collider.name == "loup")
+        if (collisionInfo.collider.name == "loup" || collisionInfo.collider.name == "loup (1)")
         {
             collisionLapinLoup = true;
             FindObjectOfType<GameManager>().GameOVER();

@@ -11,6 +11,8 @@ public class sautLapin : MonoBehaviour
     public static float vitesse = 1.0f;
     public static float distanceSaut = 8.0f;
     public static bool aSaute = false;
+    // ajout pour le deuxième loup (oui je sais c'est sale)
+    public static bool aSaute2 = false;
 
 
     // Start is called before the first frame update
@@ -18,6 +20,7 @@ public class sautLapin : MonoBehaviour
     {
         derniereTuile = transform.position;
         aSaute = false;
+        aSaute2 = false;
         etatDuSaut = 0f;
 
     }
@@ -41,6 +44,7 @@ public class sautLapin : MonoBehaviour
             if (etatDuSaut == 0f)
             {
                 aSaute = true;
+                aSaute2 = true;
             }
 
             etatDuSaut += vitesse * Time.deltaTime;
